@@ -1,13 +1,27 @@
-/* import express from 'express'
+import express from "express"
+import productsRouter from "./routes/products.router.js"
+import cartsRouter from "./routes/carts.router.js"
 
-const PORT = 8080
-const server = express ()
+const app = express()
+const PORT = 8080;
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
 
-server listen (PUERTO , () => {
-    console.log( `Escuchando a puerto ${PORT}`);
+/* app.get ("/", (req, res) => {
+    res.send('Bienvenidos!')
+}) */
+app.use("/api/products", productsRouter)
+app.use ("/api/carts",cartsRouter)
+
+app.use(express.static("./src/public"))
+
+app.listen(PORT, () => {
+    console.log (`Escuchando en el puerto ${PORT}`)
 })
- */
-const fs = require("fs").promises;
+
+
+/* const fs = require("fs").promises;
+
 class ProductManager {
     static lastId= 0
     constructor(path) {
@@ -35,8 +49,6 @@ async addProduct (tittle, description,price,thumbnail,code,stock) {
     this.products.push(nuevoProducto);
 
 await this.guardarArchivo(this.products)
-
-
 }
 async getProducts () {
     let arrayProductos = await this.leerArchivo();
@@ -51,7 +63,6 @@ getProductsById (id) {
     console.log(producto);
 }
 }
-
 async guardarArchivo (arrayProductos){
     try { 
         await fs.readFile(this.path, JSON.stringify(arrayProductos, null, 2))
@@ -68,10 +79,7 @@ async leerArchivo () {
     } catch (error) {
         console.log ("Error al leer el archivo")
     }
-}
-
-}
-
+}}
 const manager = new ProductManager("./productos.json")
 
 const retornarProductos = async () => {
@@ -84,4 +92,4 @@ const agregarProducto = async () =>{
     await manager.addProduct("producto prototipo", "producto de prueba 2", 1000, "sin imagen","abc321",30)
 }
 
-agregarProducto() 
+agregarProducto()  */
