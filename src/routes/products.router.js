@@ -7,17 +7,12 @@ router.get("/", async (req, res) => {
     try {
         const limit = req.query.limit;
         const productos = await productManager.getProducts();
-        if (limit) {
-            res.json(productos.slice(0, limit));
-        } else {
-            res.json(productos);
-        }
+        res.json(limit ? productos.slice(0, limit) : productos);
     } catch (error) {
-        console.log("Error al obtener productos");
-        res.status(500).json({
-            error: "Error interno del servidor"
-        });
+        console.error("Error al obtener los productos", error);
+        res.status(500).json({ error: "Error interno del servidor" });
     }
+    
 });
 
 router.get("/:pid", async (req, res) => {
