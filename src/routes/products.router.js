@@ -9,7 +9,7 @@ router.get("/", async (req, res) => {
         const productos = await productManager.getProducts();
         res.json(limit ? productos.slice(0, limit) : productos);
     } catch (error) {
-        console.error("Error al obtener los productos", error);
+        console.log("Error al obtener los productos", error);
         res.status(500).json({ error: "Error interno del servidor" });
     }
     
@@ -44,7 +44,7 @@ router.post("/", async (req, res) => {
             message: "Producto agregado"
         });
     } catch (error) {
-        console.error("Error al agregar producto", error);
+        console.log("Error al agregar producto", error);
         res.status(500).json({
             error: "Error  del servidor"
         });
@@ -61,7 +61,7 @@ router.put("/:pid", async (req, res) => {
             message: "Producto actualizado exitosamente"
         });
     } catch (error) {
-        console.error("Error al actualizar producto", error);
+        console.log("Error al actualizar producto", error);
         res.status(500).json({
             error: "Error interno del servidor"
         });
