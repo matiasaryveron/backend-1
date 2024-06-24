@@ -1,50 +1,38 @@
 [
-    {
-        "title": "Iphone 25",
-        "description": "Iphone 25 Ultra Plus Deluxe Pro",
-        "price": "5500",
-        "img": "Sin Imagen",
-        "code": "abc126",
-        "stock": "15",
-        "category": "Almacen",
-        "status": true,
-        "thumbnails": [],
-        "id": 4
-    },
-    {
-        "title": "LCD 55 pulgadas Sony",
-        "description": "LCD Oled 55 pulgadas",
-        "price": "2500000",
-        "img": "Sin Imagen",
-        "code": "abc124",
-        "stock": "4",
-        "category": "Electronica",
-        "status": true,
-        "thumbnails": [],
-        "id": 2
-    },
-    {
-        "title": "Estufa Electrica Axl",
-        "description": "Estufa electrica Axl",
-        "price": "3500",
-        "img": "Sin Imagen",
-        "code": "abc125",
-        "stock": "150",
-        "category": "Electronica",
-        "status": true,
-        "thumbnails": [],
-        "id": 3
-    },
-    {
-        "title": "Cafetera Electrolux",
-        "description": "Cafetera electrica ",
-        "price": "15000",
-        "img": "Sin Imagen",
-        "code": "abc123",
-        "stock": "15",
-        "category": "Electronica",
-        "status": true,
-        "thumbnails": [],
-        "id": 1
-    }
+  {
+    "title": "LCD 55 pulgadas Sony",
+    "description": "LCD Oled 55 pulgadas",
+    "price": "2500000",
+    "img": "Sin Imagen",
+    "code": "abc124",
+    "stock": "4",
+    "category": "Electronica",
+    "status": true,
+    "thumbnails": [],
+    "id": 2
+  },
+  {
+    "title": "Estufa Electrica Axl",
+    "description": "Estufa electrica Axl",
+    "price": "3500",
+    "img": "Sin Imagen",
+    "code": "abc125",
+    "stock": "150",
+    "category": "Electronica",
+    "status": true,
+    "thumbnails": [],
+    "id": 3
+  },
+  {
+    "title": "Cafetera Electrolux",
+    "description": "Cafetera electrica ",
+    "price": "15000",
+    "img": "Sin Imagen",
+    "code": "abc123",
+    "stock": "15",
+    "category": "Electronica",
+    "status": true,
+    "thumbnails": [],
+    "id": 1
+  }
 ]
