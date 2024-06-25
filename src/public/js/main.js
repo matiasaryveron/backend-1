@@ -32,7 +32,7 @@ document.getElementById("btnEnviar").addEventListener("click", () =>{
 
 const agregarProducto = () => {
     const producto ={
-        tittle : document.getElementById("title").value,
+        title : document.getElementById("title").value,
         description: document.getElementById("description").value,
         price: document.getElementById("price").value,
         img: document.getElementById("img").value,

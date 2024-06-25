@@ -13,6 +13,7 @@ class ProductManager {
             const arrayProductos = await this.leerArchivo();
 
             if (!title || !description || !price || !code || !stock || !category) {
+                console.log(title,description,price,code,stock,category)
                 console.log("Todos los campos son obligatorios");
                 return;
             }
