@@ -5,6 +5,7 @@ import { engine } from "express-handlebars"
 import { Server } from "socket.io"
 import viewsRouter from "./routes/views.router.js"
 import ProductManager from "./controllers/product-manager.js"
+import "./dababase.js"
 
 const app = express()
 const PORT = 8080;
@@ -45,3 +46,4 @@ io.on ("connection", async (socket) => {
         io.sockets.emit("productos", await productManager.getProducts())
     })
 })
+

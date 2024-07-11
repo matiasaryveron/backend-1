@@ -5,11 +5,10 @@
     "price": "2500000",
     "img": "Sin Imagen",
     "code": "abc124",
-    "stock": "4",
+    "stock": 4,
     "category": "Electronica",
     "status": true,
-    "thumbnails": [],
-    "id": 2
+    "thumbnails": []
   },
   {
     "title": "Estufa Electrica Axl",
@@ -17,11 +16,10 @@
     "price": "3500",
     "img": "Sin Imagen",
     "code": "abc125",
-    "stock": "150",
+    "stock": 150,
     "category": "Electronica",
     "status": true,
-    "thumbnails": [],
-    "id": 3
+    "thumbnails": []
   },
   {
     "title": "Iphone X",
@@ -29,10 +27,9 @@
     "price": "300",
     "img": "Sin Imagen",
     "code": "a24",
-    "stock": "4",
+    "stock": 4,
     "category": "Celulares",
     "status": true,
-    "thumbnails": [],
-    "id": 4
+    "thumbnails": []
   }
 ]
