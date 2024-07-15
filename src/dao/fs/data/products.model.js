@@ -1,5 +1,5 @@
-import { type } from "express/lib/response";
 import mongoose from "mongoose";
+import mongoosePaginate from 'mongoose-paginate-v2'
 
 const productoSchema = new mongoose.Schema ({
     title: {
@@ -38,6 +38,7 @@ const productoSchema = new mongoose.Schema ({
         type:[String]
     }
 })
+productoSchema.plugin(mongoosePaginate)
 
 const ProductModel = mongoose.model ("products", productoSchema)
 

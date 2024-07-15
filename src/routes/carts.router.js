@@ -1,5 +1,6 @@
 import { Router } from "express";
 import CartManager from "../dao/db/cart-manager-db.js";
+import CartModel from "../dao/models/cart.model.js"
 
 const router = Router();
 const cartManager = new CartManager();
@@ -16,17 +17,27 @@ router.post("/", async (req, res) => {
 });
 
 router.get("/:cid", async (req, res) => {
+
     const cartId = req.params.cid;
 
     try {
-        const carrito = await cartManager.getCarritoById(cartId);
-        res.json(carrito.products);
+        const carrito = await CartModel.findById(cartId);
+
+        return res.json(carrito.products);
+
     } catch (error) {
+
         console.log("Error al obtener el carrito");
+
         res.status(500).json({ error: "Error interno del servidor" });
     }
 });
+
+
+
+
 router.post("/:cid/product/:pid", async (req, res) => {
+    
     const cartId = req.params.cid;
     const productId = req.params.pid;
     const quantity = req.body.quantity || 1;
