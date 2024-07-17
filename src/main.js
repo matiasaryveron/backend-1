@@ -27,7 +27,7 @@ const httpServer = app.listen(PORT, () => {
     console.log (`Escuchando en el puerto ${PORT}`)
 })
 
-const productManager = new ProductManager ("./src/models/productos.json")
+/* const productManager = new ProductManager ("./src/models/productos.json")
 
 const io = new Server (httpServer)
 
@@ -47,3 +47,4 @@ io.on ("connection", async (socket) => {
     })
 })
 
+ */
