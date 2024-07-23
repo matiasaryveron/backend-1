@@ -5,7 +5,7 @@ import { engine } from "express-handlebars"
 import { Server } from "socket.io"
 import viewsRouter from "./routes/views.router.js"
 import ProductManager from "./controllers/product-manager.js"
-import "./dababase.js"
+import "./database.js"
 
 const app = express()
 const PORT = 8080;
@@ -27,7 +27,7 @@ const httpServer = app.listen(PORT, () => {
     console.log (`Escuchando en el puerto ${PORT}`)
 })
 
-/* const productManager = new ProductManager ("./src/models/productos.json")
+const productManager = new ProductManager ("./src/models/productos.json")
 
 const io = new Server (httpServer)
 
@@ -47,4 +47,4 @@ io.on ("connection", async (socket) => {
     })
 })
 
- */
+ 
