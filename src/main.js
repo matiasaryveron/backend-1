@@ -46,5 +46,3 @@ io.on ("connection", async (socket) => {
         io.sockets.emit("productos", await productManager.getProducts())
     })
 })
-
- 

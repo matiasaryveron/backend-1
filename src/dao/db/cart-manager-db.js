@@ -1,4 +1,4 @@
-import CartModel from "../models/cart.models.js"
+import CartModel from "../models/cart.model.js"
 
 class CartManager {
 
